@@ -1,0 +1,1 @@
+# seven-crazy.github.io
