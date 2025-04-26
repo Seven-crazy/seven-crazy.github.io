@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades da Semana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#ola-mundo">Olá Mundo</a></li>
+                <li><a href="#soma">Soma de Inteiros</a></li>
+                <li><a href="#alterar-id">Alterar por ID</a></li>
+                <li><a href="#alterar-name">Alterar por Name</a></li>
+                <li><a href="#alterar-class">Alterar por Class</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ola-mundo">
+            <h2>1. Olá Mundo</h2>
+            <p id="mensagem">Clique no botão para ver a mensagem!</p>
+            <button onclick="mostrarOlaMundo()">Mostrar Mensagem</button>
+        </section>
+
+        <section id="soma">
+            <h2>2. Soma de Dois Inteiros</h2>
+            <input type="number" id="num1" placeholder="Número 1">
+            <input type="number" id="num2" placeholder="Número 2">
+            <button onclick="calcularSoma()">Calcular</button>
+            <p id="resultado-soma">Resultado: </p>
+        </section>
+
+        <section id="alterar-id">
+            <h2>3. Alterar Propriedade por ID</h2>
+            <p id="texto-id">Texto original</p>
+            <button onclick="alterarPorId()">Alterar Cor</button>
+        </section>
+
+        <section id="alterar-name">
+            <h2>4. Alterar Propriedade por Name</h2>
+            <p name="texto-name">Texto original</p>
+            <button onclick="alterarPorName()">Alterar Cor</button>
+        </section>
+
+        <section id="alterar-class">
+            <h2>5. Alterar Propriedade por Class</h2>
+            <p class="texto-class">Texto original</p>
+            <button onclick="alterarPorClass()">Alterar Cor</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

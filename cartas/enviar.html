@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Carta</title>
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container do formulário */
+        .form-container {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilização do título */
+        .form-container h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilização dos campos do formulário */
+        .form-container label {
+            display: block;
+            font-size: 14px;
+            color: #34495e;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Estilização do botão */
+        .form-container button {
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .form-container button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+        }
+
+        .form-container button:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+            .form-container h1 {
+                font-size: 22px;
+            }
+            .form-container input,
+            .form-container textarea {
+                font-size: 13px;
+            }
+            .form-container button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enviar Nova Carta</h1>
+        <form id="carta-form">
+            <label for="destinatario">Destinatário</label>
+            <input type="text" id="destinatario" name="destinatario" placeholder="Nome do destinatário" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto da carta" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        // Script para lidar com o envio do formulário
+        document.getElementById('carta-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Carta enviada com sucesso! (Esta é uma simulação)');
+            // Aqui você pode adicionar lógica para enviar os dados a um servidor
+            this.reset(); // Limpa o formulário
+        });
+    </script>
+</body>
+</html>

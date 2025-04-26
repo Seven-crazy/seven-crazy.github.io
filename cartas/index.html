@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Cartas</title>
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* Container da grade de cartas */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Estilização de cada carta */
+        .carta {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            transition: transform 0.3s;
+        }
+
+        .carta:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilização do título da carta */
+        .carta h2 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        /* Estilização do texto da carta */
+        .carta p {
+            font-size: 15px;
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Botão de enviar carta (fixo) */
+        .botao-enviar {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(90deg, #007bff, #00d4ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .botao-enviar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 123, 255, 0.6);
+        }
+
+        .botao-enviar:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .carta {
+                padding: 15px;
+            }
+            .carta h2 {
+                font-size: 20px;
+            }
+            .carta p {
+                font-size: 14px;
+            }
+            .botao-enviar {
+                padding: 12px 20px;
+                font-size: 14px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Carta 1 -->
+        <div class="carta">
+            <h2>Carta 1</h2>
+            <p>
+                Prezado(a),<br><br>
+                Esta é uma carta de exemplo. Aqui você pode visualizar uma mensagem personalizada.
+                Cada carta pode ter conteúdo único.
+            </p>
+        </div>
+        <!-- Carta 2 -->
+        <div class="carta">
+            <h2>Carta 2</h2>
+            <p>
+                Prezado(a),<br><br>
+                Outra carta de exemplo com um texto diferente. 
+                O design é consistente em todas as cartas.
+            </p>
+        </div>
+        <!-- Carta 3 -->
+        <div class="carta">
+            <h2>Carta 3</h2>
+            <p>
+                Prezado(a),<br><br>
+                Mais uma carta para demonstrar o layout em grade.
+                Adicione quantas cartas desejar.
+            </p>
+        </div>
+        <!-- Carta 4 -->
+        <div class="carta">
+            <h2>Carta 4</h2>
+            <p>
+                Prezado(a),<br><br>
+                Esta é a última carta de exemplo. 
+                Personalize o conteúdo conforme necessário.
+            </p>
+        </div>
+    </div>
+
+    <!-- Botão para página de envio -->
+    <a href="enviar.html" class="botao-enviar">Enviar Carta</a>
+</body>
+</html>
